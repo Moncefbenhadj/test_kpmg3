@@ -1,15 +1,6 @@
 {
     "version": 2,
-    "builds": [
-        {
-            "src": "./app.js",
-            "use": "@vercel/n.ode"
-        }
-    ],
-    "rewrites": [
-        {
-            "source": "/(.*)",
-            "destination": "/"
-        }
-    ]
-}
+    "name": "native-server",
+    "builds": [{ "src": "App.js", "use": "@vercel/node" }],
+    "routes": [{ "src": "/(.*)", "dest": "/App.js" }]
+  }
